@@ -1,0 +1,747 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F5F9"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ============ HEADER ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#0F172A"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="56dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_official"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:letterSpacing="0.15"
+                android:text="OFFICIAL PROFILE"
+                android:textColor="#38BDF8"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/logo_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_uniname"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Universitas Kristen Petra"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@id/logo_image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_official" />
+
+            <ImageView
+                android:id="@+id/logo_image"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/header_deskripsi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#1E293B"
+                android:orientation="vertical"
+                android:padding="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_uniname">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="5dp"
+                    android:text="Universitas Kristen Petra (UK Petra) adalah perguruan tinggi swasta nasional di Surabaya yang berdiri sejak 1961, berkomitmen membentuk global socioleaders dengan standar akademik unggul[cite: 1]"
+                    android:textColor="#CBD5E1"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ STATISTIK ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sec_statistik"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-28dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header">
+
+            <LinearLayout
+                android:id="@+id/sec_statistik_kiri"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_modern_card_rounded"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="18dp"
+                app:layout_constraintEnd_toStartOf="@id/sec_statistik_kanan"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DIDIRIKAN"
+                    android:textColor="#64748B"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="2 Sept 1961"
+                    android:textColor="#0F172A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Yayasan PPPK Petra"
+                    android:textColor="#475569"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/sec_statistik_kanan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_modern_card_rounded"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                android:padding="18dp"
+                app:layout_constraintBottom_toBottomOf="@id/sec_statistik_kiri"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sec_statistik_kiri"
+                app:layout_constraintTop_toTopOf="@id/sec_statistik_kiri">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MAHASISWA"
+                    android:textColor="#64748B"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="7.000+"
+                    android:textColor="#0F172A"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Aktif &amp; Dinamis"
+                    android:textColor="#0284C7"
+                    android:textSize="11sp" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ LOKASI KAMPUS ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sec_lokasi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sec_statistik">
+
+            <TextView
+                android:id="@+id/tv_lokasi_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LOKASI KAMPUS UTAMA"
+                android:textColor="#334155"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_lokasi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_modern_card_rounded"
+                android:elevation="2dp"
+                android:padding="18dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_lokasi_title">
+
+                <TextView
+                    android:id="@+id/tv_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_alamat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:text="Jl. Siwalankerto No. 121-131"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/tv_pin"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_kota"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Wonocolo, Surabaya, Jawa Timur 60236"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tv_alamat"
+                    app:layout_constraintTop_toBottomOf="@id/tv_alamat" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ DAFTAR FAKULTAS ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sec_Fakultas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sec_lokasi">
+
+            <TextView
+                android:id="@+id/tv_fakultas_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAKULTAS &amp; SEKOLAH UNGGULAN"
+                android:textColor="#334155"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_fakultas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_modern_card_rounded"
+                android:elevation="2dp"
+                android:padding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fakultas_title">
+
+                <!-- Item 1 -->
+                <TextView
+                    android:id="@+id/fak1_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Fakultas Teknologi Industri (FTI)"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fak1_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Informatika, Teknik Industri, Elektro, Mesin, dll."
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak1_title" />
+
+                <View
+                    android:id="@+id/fak_divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak1_desc" />
+
+                <!-- Item 2 -->
+                <TextView
+                    android:id="@+id/fak2_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="School of Business and Management"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak_divider1" />
+
+                <TextView
+                    android:id="@+id/fak2_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Manajemen Bisnis Internasional, Akuntansi, Hotel Management"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak2_title" />
+
+                <View
+                    android:id="@+id/fak_divider2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak2_desc" />
+
+                <!-- Item 3 -->
+                <TextView
+                    android:id="@+id/fak3_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Fakultas Humaniora dan Industri Kreatif"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak_divider2" />
+
+                <TextView
+                    android:id="@+id/fak3_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Desain Interior, DKV, Sastra, dan Creative Media"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak3_title" />
+
+                <View
+                    android:id="@+id/fak_divider3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="14dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak3_desc" />
+
+                <!-- Item 4 -->
+                <TextView
+                    android:id="@+id/fak4_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="Fakultas Teknik Sipil dan Perencanaan"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak_divider3" />
+
+                <TextView
+                    android:id="@+id/fak4_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Teknik Sipil dan Arsitektur"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fak4_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ FASILITAS ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sec_fasilitas"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sec_Fakultas">
+
+            <TextView
+                android:id="@+id/tv_fasilitas_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FASILITAS UTAMA KAMPUS"
+                android:textColor="#334155"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_fasilitas"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_modern_card_rounded"
+                android:elevation="2dp"
+                android:padding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_fasilitas_title">
+
+                <TextView
+                    android:id="@+id/fas1_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="📚 Petra Library &amp; Cultural Center"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/fas1_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Pusat literatur digital dan koleksi arsip budaya nusantara."
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas1_title" />
+
+                <View
+                    android:id="@+id/fas_divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas1_desc" />
+
+                <TextView
+                    android:id="@+id/fas2_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="💻 Advanced Computer Labs"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas_divider1" />
+
+                <TextView
+                    android:id="@+id/fas2_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Laboratorium Komputer spesifikasi tinggi untuk riset teknologi."
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas2_title" />
+
+                <View
+                    android:id="@+id/fas_divider2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas2_desc" />
+
+                <TextView
+                    android:id="@+id/fas3_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="🏟 Petra Auditorium &amp; Indoor Arena"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas_divider2" />
+
+                <TextView
+                    android:id="@+id/fas3_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Gedung Serbaguna berkapasitas ribuan kursi untuk event nasional"
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/fas3_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- ============ SDGs / GOALS ============ -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sec_goals"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:paddingHorizontal="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sec_fasilitas">
+
+            <TextView
+                android:id="@+id/tv_goals_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUSTAINABLE DEVELOPMENT GOALS (SDGs)"
+                android:textColor="#334155"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/card_goals"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_modern_card_rounded"
+                android:elevation="2dp"
+                android:padding="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_goals_title">
+
+                <TextView
+                    android:id="@+id/goals_deskripsi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dengan kegiatan dan kolaborasi dalam bidang pendidikan, organisasi, pengabdian masyarakat, hingga festival, UK Petra terus-menerus berkontribusi dan berpartisipasi dalam menjalankan Sustainable Development Goals."
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Goal 1 -->
+                <Button
+                    android:id="@+id/button_1"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="14dp"
+                    android:text="1"
+                    android:backgroundTint="#F44336"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/goals_deskripsi" />
+
+                <TextView
+                    android:id="@+id/goal1_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="No Poverty"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/button_1"
+                    app:layout_constraintTop_toTopOf="@id/button_1" />
+
+                <TextView
+                    android:id="@+id/goal1_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Mengakhiri kemiskinan dalam segala bentuk."
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/button_1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/goal1_title"
+                    app:layout_constraintTop_toBottomOf="@id/goal1_title" />
+
+                <View
+                    android:id="@+id/goal_divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_1" />
+
+                <!-- Goal 3 -->
+                <Button
+                    android:id="@+id/button_3"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="3"
+                    android:backgroundTint="#F44336"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/goal_divider1" />
+
+                <TextView
+                    android:id="@+id/goal3_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Good Health and Well-being"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/button_3"
+                    app:layout_constraintTop_toTopOf="@id/button_3" />
+
+                <TextView
+                    android:id="@+id/goal3_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Kehidupan sehat dan peningkatan kesejahteraan."
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/button_3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/goal3_title"
+                    app:layout_constraintTop_toBottomOf="@id/goal3_title" />
+
+                <View
+                    android:id="@+id/goal_divider2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginVertical="12dp"
+                    android:background="#E2E8F0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_3" />
+
+                <!-- Goal 9 -->
+                <Button
+                    android:id="@+id/button_9"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:text="9"
+                    android:backgroundTint="#F44336"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/goal_divider2" />
+
+                <TextView
+                    android:id="@+id/goal9_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Industry, Innovation, and Infrastructure"
+                    android:textColor="#0F172A"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/button_9"
+                    app:layout_constraintTop_toTopOf="@id/button_9" />
+
+                <TextView
+                    android:id="@+id/goal9_desc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Infrastruktur tangguh dan inovasi teknologi."
+                    android:textColor="#64748B"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="@id/button_9"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/goal9_title"
+                    app:layout_constraintTop_toBottomOf="@id/goal9_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
